@@ -46,7 +46,7 @@ public class Pizza {
 
     public void addExtraToppings(){
       if(!isExtraToppingsAdded){
-          price +=(isVeg?70:120);
+          price +=(isVeg?70 : 120);
           if(isVeg){
               bill +="Extra Toppings Added: 70"+"\n";
           }
@@ -68,6 +68,6 @@ public class Pizza {
 
     public String getBill(){
 
-        return this.bill +="Total Price: "+price+"\n";
+        return this.bill+"Total Price: "+price+"\n";
     }
 }
