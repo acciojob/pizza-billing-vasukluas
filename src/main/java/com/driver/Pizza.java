@@ -4,19 +4,17 @@ public class Pizza {
 
     private int price;
     private Boolean isVeg;
-
+    private String bill;
     private Boolean isExtraCheeseAdded;
 
     private Boolean isExtraToppingsAdded;
 
     private Boolean isTakeAway;
 
-    private String bill;
-
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         isExtraCheeseAdded=false;
-        price=(isVeg?300:400);
+        price =(isVeg ? 300 : 400);
         isExtraToppingsAdded=false;
         isTakeAway=false;
         this.bill="";
@@ -46,13 +44,13 @@ public class Pizza {
 
     public void addExtraToppings(){
       if(!isExtraToppingsAdded){
-          price +=(isVeg?70 : 120);
-          if(isVeg){
+          price +=(isVeg? 70 : 120);
+          if(isVeg)
               bill +="Extra Toppings Added: 70"+"\n";
-          }
-          else{
+
+          else
               bill +="Extra Toppings Added: 120"+"\n";
-          }
+
           isExtraToppingsAdded=true;
       }
     }
@@ -60,7 +58,7 @@ public class Pizza {
     public void addTakeaway(){
         if(!isTakeAway){
             price +=20;
-            bill +="Paper Bag Added: 20"+"\n";
+            bill +="Paperbag Added: 20"+"\n";
         }
         isTakeAway=true;
 
